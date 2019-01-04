@@ -1,0 +1,298 @@
+.porfolio {
+    padding: $pd-4 0;
+    .porfolio_content {
+        h1 {
+            text-align: center;
+            text-transform: uppercase;
+            @include text($color-black-0, $fs-0 + 30, $fw-bold-0);
+            letter-spacing: $ls-1;
+            margin-bottom: $mg-2 + 10;
+        }
+        .porfolio_items {
+            .myNavTab {
+                border: none;
+                padding: 0 112px;
+                margin-bottom: $mg-2 + 35;
+                .nav-item {
+                    margin: 0 $mg-1;
+                    .nav-link {
+                        border: none;
+                        @include text($color-black-0, $fs-0 - 1, $fw-bold);
+                        display: inline-block;
+                        width: 150px;
+                        height: 40px;
+                        line-height: 40px;
+                        text-align: center;
+                        padding: 0;
+                        border-radius: 20px;
+                        -webkit-border-radius: 20px;
+                        -moz-border-radius: 20px;
+                        -ms-border-radius: 20px;
+                        -o-border-radius: 20px;
+                        text-transform: uppercase;
+                        letter-spacing: $ls-1 - 4;
+                        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+                        transition: all 0.3s;
+                        -webkit-transition: all 0.3s;
+                        -moz-transition: all 0.3s;
+                        -ms-transition: all 0.3s;
+                        -o-transition: all 0.3s;
+                        &.active {
+                            background: linear-gradient(to right, $color-yellow-1, $color-brown-0);
+                            @include text($color-white-0, $fs-0 - 1, $fw-bold);
+                            box-shadow: none;
+                            transition: all 0.3s;
+                            -webkit-transition: all 0.3s;
+                            -moz-transition: all 0.3s;
+                            -ms-transition: all 0.3s;
+                            -o-transition: all 0.3s;
+                        }
+                        &:hover {
+                            background: linear-gradient(to right, $color-yellow-1, $color-brown-0);
+                            @include text($color-white-0, $fs-0 - 1, $fw-bold);
+                            box-shadow: none;
+                        }
+                    }
+                }
+            }
+            .myTab_content {
+                #all {
+                    .myTab_item {
+                        position: relative;
+                        transition: all 0.5;
+                        -webkit-transition: all 0.5;
+                        -moz-transition: all 0.5;
+                        -ms-transition: all 0.5;
+                        -o-transition: all 0.5;
+                        img {
+                            height: 220px;
+                            border-radius: 6px;
+                            -webkit-border-radius: 6px;
+                            -moz-border-radius: 6px;
+                            -ms-border-radius: 6px;
+                            -o-border-radius: 6px;
+                            box-shadow: $bs-0;
+                        }
+                        .img_overlay {
+                            position: absolute;
+                            top: 0;
+                            left: 15px;
+                            right: 15px;
+                            height: 100%;
+                            background: rgba(7, 24, 40, 0.60);
+                            border-radius: 6px;
+                            -webkit-border-radius: 6px;
+                            -moz-border-radius: 6px;
+                            -ms-border-radius: 6px;
+                            -o-border-radius: 6px;
+                            opacity: 0;
+                            transition: all 0.5s;
+                            -webkit-transition: all 0.5s;
+                            -moz-transition: all 0.5s;
+                            -ms-transition: all 0.5s;
+                            -o-transition: all 0.5s;
+                            .overlay_content {
+                                p {
+                                    @include text($color-white-0, $fs-0, $fw-bold-0);
+                                    text-transform: capitalize;
+                                    letter-spacing: $ls-1 - 3;
+                                    margin: 0;
+                                    padding-left: 34%;
+                                    padding-top: 32%;
+                                    transition: all 0.3s;
+                                    -webkit-transition: all 0.3s;
+                                    -moz-transition: all 0.3s;
+                                    -ms-transition: all 0.3s;
+                                    -o-transition: all 0.3s;
+                                }
+                            }
+                        }
+                        &:hover {
+                            .img_overlay {
+                                opacity: 1;
+                                .overlay_content {
+                                    p {
+                                        padding-top: 28.5%;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .active {
+                    .myTab_item {
+                        position: relative;
+                        transition: all 0.5;
+                        -webkit-transition: all 0.5;
+                        -moz-transition: all 0.5;
+                        -ms-transition: all 0.5;
+                        -o-transition: all 0.5;
+                        img {
+                            height: 220px;
+                            border-radius: 6px;
+                            -webkit-border-radius: 6px;
+                            -moz-border-radius: 6px;
+                            -ms-border-radius: 6px;
+                            -o-border-radius: 6px;
+                            box-shadow: $bs-0;
+                        }
+                        .img_overlay {
+                            position: absolute;
+                            top: 0;
+                            left: 15px;
+                            right: 15px;
+                            height: 100%;
+                            background: rgba(7, 24, 40, 0.60);
+                            border-radius: 6px;
+                            -webkit-border-radius: 6px;
+                            -moz-border-radius: 6px;
+                            -ms-border-radius: 6px;
+                            -o-border-radius: 6px;
+                            opacity: 0;
+                            transition: all 0.5s;
+                            -webkit-transition: all 0.5s;
+                            -moz-transition: all 0.5s;
+                            -ms-transition: all 0.5s;
+                            -o-transition: all 0.5s;
+                            .overlay_content {
+                                p {
+                                    @include text($color-white-0, $fs-0, $fw-bold-0);
+                                    text-transform: capitalize;
+                                    letter-spacing: $ls-1 - 3;
+                                    margin: 0;
+                                    padding-left: 34%;
+                                    padding-top: 32%;
+                                    transition: all 0.3s;
+                                    -webkit-transition: all 0.3s;
+                                    -moz-transition: all 0.3s;
+                                    -ms-transition: all 0.3s;
+                                    -o-transition: all 0.3s;
+                                }
+                            }
+                        }
+                        &:hover {
+                            .img_overlay {
+                                opacity: 1;
+                                .overlay_content {
+                                    p {
+                                        padding-top: 28.5%;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1200px){
+    .porfolio{
+        .porfolio_content{
+            .porfolio_items{
+                .myNavTab{
+                    padding: 0 32px;
+                }
+                .myTab_content{
+                    #all{
+                        .myTab_item{
+                            img{
+                                height: 205px;
+                            }
+                            .img_overlay{
+                                .overlay_content{
+                                    p{
+                                        padding-left: 30%;
+                                        padding-top: 37%;                                        
+                                    }
+                                }
+                            }
+                            &:hover{
+                                .img_overlay{
+                                    .overlay_content{
+                                        p{
+                                            padding-top: 33.5%;
+                                        }
+                                    }
+                                }
+                            }
+                        }                        
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 992px){
+    .porfolio{
+        .porfolio_content{
+            .porfolio_items{
+                .myNavTab{
+                    padding: 0 80px;
+                    .nav-item{
+                        margin: 10px;
+                    }
+                }
+                .myTab_content{
+                    #all{
+                        .myTab_item{
+                            img{
+                                height: 170px;
+                            }
+                            .img_overlay{
+                                .overlay_content{
+                                    p{
+                                        padding-left: 23%;
+                                    }
+                                }
+                            }                            
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px){
+    .porfolio{
+        .porfolio_content{
+            .porfolio_items{
+                .myNavTab{
+                    padding: 0;
+                }
+                .myTab_content{
+                    #all{
+                        .myTab_item{
+                            margin: auto;
+                            width: 90%;
+                            margin-bottom: $mg-2;
+                            img{
+                                height: 250px;
+                            }
+                            .img_overlay{
+                                .overlay_content{
+                                    p{
+                                        padding-left: 37%;
+                                        padding-top: 29%;
+                                    }
+                                }
+                            }
+                            &:hover{
+                                .img_overlay{
+                                    .overlay_content{
+                                        p{
+                                            padding-top: 25.5%;
+                                        }
+                                    }
+                                }
+                            }                            
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

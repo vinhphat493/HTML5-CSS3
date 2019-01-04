@@ -1,0 +1,186 @@
+.contact {
+    .contact_content {
+        padding: $pd-4 0 $pd-3;
+        h1 {
+            @include text($color-black-0, $fs-0 + 30, $fw-bold-0);
+            text-transform: uppercase;
+            text-align: center;
+            margin-bottom: $mg-1 + 5;
+            letter-spacing: $ls-1;
+        }
+        p {
+            @include text($color-black-0, $fs-0, $fw-normal);
+            width: 60%;
+            margin: auto;
+            text-align: center;
+            letter-spacing: $ls-1 - 4;
+            margin-bottom: $mg-2;
+        }
+        .contact_form {
+            margin: auto;
+            width: 80%;
+            .form-group {
+                margin-bottom: $mg-2;
+                .contact_list{
+                    list-style-type: none;
+                    padding: 0; 
+                    li{
+                        i{
+                            margin-right: $mg-1;
+                            font-size: $fs-2;
+                        }
+                        span{
+                            margin-left: $mg-1;
+                        }
+                    }
+                    li:first-child{
+                        span{
+                            margin-left: 16px;
+                        }
+                    }
+                    li:last-child{
+                        span{
+                            margin-left: 12px;
+                        }
+                    }
+
+                }
+                span {
+                    display: inline-block;
+                    margin-bottom: $mg-1;
+                }
+                .form-control {
+                    &:focus {
+                        border-color: #ced4da;
+                        box-shadow: none;
+                    }
+                }
+                #textArea {
+                    width: 100%;
+                    border: 1px solid #ced4da;
+                }
+                .btnSend {
+                    margin-top: $mg-2;
+                    // margin-left: 81%;
+                    padding: $pd-1 $pd-3 + 7;
+                    border-radius: 30px;
+                    -webkit-border-radius: 30px;
+                    -moz-border-radius: 30px;
+                    -ms-border-radius: 30px;
+                    -o-border-radius: 30px;
+                    background: linear-gradient(to right, $color-brown-0, $color-yellow-1);
+                    position: relative;
+                    z-index: 2;
+                    transition: all 0.5s;
+                    -webkit-transition: all 0.5s;
+                    -moz-transition: all 0.5s;
+                    -ms-transition: all 0.5s;
+                    -o-transition: all 0.5s;
+                    span {
+                        @include text($color-white-0, $fs-0, $fw-bold-0);
+                        letter-spacing: $ls-1 - 4;
+                        margin-bottom: 0;
+                        position: relative;
+                        z-index: 3;
+                    }
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        background: linear-gradient(to right, $color-yellow-1, $color-brown-0);
+                        z-index: -1;
+                        border-radius: 30px;
+                        -webkit-border-radius: 30px;
+                        -moz-border-radius: 30px;
+                        -ms-border-radius: 30px;
+                        -o-border-radius: 30px;
+                        opacity: 0;
+                        transition: all 0.5s;
+                        -webkit-transition: all 0.5s;
+                        -moz-transition: all 0.5s;
+                        -ms-transition: all 0.5s;
+                        -o-transition: all 0.5s;
+                    }
+                    &:hover {
+                        &::before {
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1200px){
+    .contact{
+        .contact_content{
+            .contact_form{
+                .form-group{
+                    .btnSend{
+                        // margin-left: 68%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 992px){
+    .contact{
+        .contact_content{
+            .contact_form{
+                .form-group{
+                    .btnSend{
+                        // margin-left: 60%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px){
+    .contact{
+        .contact_content{
+            .contact_form{
+                .form-group{
+                    .btnSend{
+                        // margin-left: 70%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px){
+    .contact{
+        .contact_content{
+            .contact_form{
+                .form-group{
+                    .btnSend{
+                        // margin-left: 70%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 576px){
+    .contact{
+        .contact_content{
+            .contact_form{
+                .form-group{
+                    .btnSend{
+                        margin-left: 60%;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,188 @@
+.header {
+    background-image: url("../../img/8.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    height: 980px;
+    position: relative;
+    .myNavbar {
+        flex-wrap: wrap;
+        z-index: 2;
+        .navbar-brand {
+            flex-grow: 3;
+            img {
+                width: 300px;
+            }
+        }
+        .myNavMenu {
+            flex-grow: 0;
+            .navbar-nav {
+                .nav-item {
+                    position: relative;
+                    padding: $pd-0;
+                    .nav-link {
+                        @include text($color-white-0,
+                        $fs-0+1,
+                        $fw-normal);
+                        letter-spacing: $ls-1 - 4;
+                    }
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        height: 3px;
+                        background: linear-gradient(to right, $color-yellow-0, $color-brown-0);
+                        transition: all 0.5s;
+                        -webkit-transition: all 0.5s;
+                        -moz-transition: all 0.5s;
+                        -ms-transition: all 0.5s;
+                        -o-transition: all 0.5s;
+                        width: 0;
+                    }
+                    &.active {
+                        .nav-link {
+                            @include text($color-yellow-1,
+                            $fs-0+1,
+                            $fw-normal);
+                        }
+                        &::before {
+                            width: 100%;
+                        }
+                    }
+                    &:hover {
+                        .nav-link {
+                            @include text($color-yellow-1,
+                            $fs-0+1,
+                            $fw-normal);
+                        }
+                        &::before {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .header_overlay {
+        background-color: rgba(0, 0, 0, 0.7);
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        .overlay_content {
+            position: absolute;
+            top: 35%;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            text-align: center;
+            h1 {
+                @include text($color-white-0,
+                $fs-0+35,
+                $fw-bold-0);
+                text-transform: capitalize;
+                letter-spacing: $ls-1 - 3;
+                margin-bottom: $mg-1 + 5;
+                span {
+                    @include text($color-yellow-1,
+                    $fs-0+35,
+                    $fw-bold);
+                    text-transform: uppercase;
+                }
+            }
+            p {
+                @include text($color-white-0,
+                $fs-0+10,
+                $fw-bold-0);
+                text-transform: uppercase;
+                margin-bottom: $mg-2 + 10;
+            }
+            .overlay_btn {
+                .btn {
+                    padding: $pd-0 + 3 $pd-0 + 15;
+                    border-radius: 20px;
+                    -webkit-border-radius: 20px;
+                    -moz-border-radius: 20px;
+                    -ms-border-radius: 20px;
+                    -o-border-radius: 20px;
+                    background: linear-gradient(to right, $color-brown-0, $color-yellow-1);
+                    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+                    margin: 0 $mg-1;
+                    position: relative;
+                    z-index: 2;
+                    span {
+                        @include text($color-white-0,
+                        $fs-0 - 1,
+                        $fw-bold-0);
+                        text-transform: uppercase;
+                        line-height: $fs-0 + 11;
+                        position: relative;
+                        z-index: 3;
+                    }
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        background: linear-gradient(to right, $color-yellow-1, $color-brown-0);
+                        opacity: 0;
+                        z-index: -1;
+                        transition: all 0.5s;
+                        -webkit-transition: all 0.5s;
+                        -moz-transition: all 0.5s;
+                        -ms-transition: all 0.5s;
+                        -o-transition: all 0.5s;
+                        border-radius: 20px;
+                        -webkit-border-radius: 20px;
+                        -moz-border-radius: 20px;
+                        -ms-border-radius: 20px;
+                        -o-border-radius: 20px;
+                    }
+                    &:hover {
+                        &::before {
+                            opacity: 1;
+                        }
+                    }
+                }
+                .btn_right {
+                    padding: $pd-0 + 3 $pd-0 + 29;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    .header {
+        .myNavbar {
+            .myNavMenu {
+                .navbar-nav {
+                    .nav-item {
+                        padding: $pd-0 0;
+                    }
+                }
+            }
+        }
+        .header_overlay{
+            .overlay_content{
+                top: 50%;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px){
+    .header{
+        .navbar-toggler{
+            border-color: $color-yellow-1;
+            background-color: $color-yellow-1;
+            &:focus{
+                outline: none;
+            }
+        }
+    }
+}

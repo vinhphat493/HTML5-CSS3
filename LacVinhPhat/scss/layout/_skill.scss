@@ -1,0 +1,64 @@
+.skill {
+    padding: $pd-4 0;
+    background-color: $color-gray-1;
+    .skill_content {
+        h1 {
+            @include text($color-black-0, $fs-0 + 30, $fw-bold-0);
+            text-align: center;
+            text-transform: uppercase;
+            margin-bottom: $mg-2 + 10;
+            letter-spacing: $ls-1;
+        }
+        .items {
+            .item {
+                margin: auto;
+                p {
+                    @include text($color-black-0, $fs-0 + 3, $fw-bold-0);
+                    text-transform: uppercase;
+                    margin-bottom: $mg-1;
+                }
+                .myProgressBar {
+                    height: $fs-0 + 15;
+                    border-radius: 15px;
+                    -webkit-border-radius: 15px;
+                    -moz-border-radius: 15px;
+                    -ms-border-radius: 15px;
+                    -o-border-radius: 15px;
+                    padding: $pd-0 $pd-0 $pd-0 + 0.5;
+                    background-color: $color-gray-7;
+                    overflow: hidden;
+                    margin-bottom: $mg-2;
+                    width: 90%;
+                    .progress-bar {
+                        @include text($color-gray-7, $fs-0, $fw-bold);
+                        letter-spacing: $ls-1 - 4;
+                        background-color: $color-white-0;
+                        border-radius: 15px;
+                        -webkit-border-radius: 15px;
+                        -moz-border-radius: 15px;
+                        -ms-border-radius: 15px;
+                        -o-border-radius: 15px;
+                        position: relative;
+                        &::before {
+                            content: "";
+                            position: absolute;
+                            top: 2px;
+                            right: 3px;
+                            width: 16px;
+                            height: 16px;
+                            line-height: 16px;
+                            background-color: $color-yellow-1;
+                            border-radius: 10px;
+                            -webkit-border-radius: 10px;
+                            -moz-border-radius: 10px;
+                            -ms-border-radius: 10px;
+                            -o-border-radius: 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+a {}
